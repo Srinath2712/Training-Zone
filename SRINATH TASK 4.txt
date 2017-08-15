@@ -1,0 +1,287 @@
+-- Employee Table code--- 
+ +
+ +CREATE SEQUENCE Employee3a_seq
+ +START WITH 1
+ +INCREMENT BY 1 
+ +NOCACHE
+ +NOCYCLE;
+ +
+ +INSERT INTO Employee ( e_id, e_fname, e_lname, e_email, e_phone, e_street, e_suburb, e_postcode, e_gender, date_employed)
+ +VALUES (Employee3a_seq.nextval, 'john', 'smith', 'j.smith@gmail.com', '0401990255', '12smith st', 'dakota', '4623', 'm',to_date('12/01/2014','DD/MM/YYYY'));
+ +
+ +INSERT INTO Employee ( e_id, e_fname, e_lname, e_email, e_phone, e_street, e_suburb, e_postcode, e_gender, date_employed)
+ +VALUES (Employee3a_seq.nextval, 'jane', 'rooster', 'j.rooster@uni.edu', '402402404', '665 angleside mwy', 'poolamatta', '4246', 'f',to_date('12/01/2014','DD/MM/YYYY'));
+ +
+ +INSERT INTO Employee ( e_id, e_fname, e_lname, e_email, e_phone, e_street, e_suburb, e_postcode, e_gender, date_employed)
+ +VALUES (Employee3a_seq.nextval, 'Percy bisshe', 'shelley', 'pb.shelley@uni.edu', '403403403', '3 cigar smoke lane', 'Dakota', '4623', 'f',to_date('12/01/2014','DD/MM/YYYY'));
+ +
+ +INSERT INTO Employee ( e_id, e_fname, e_lname, e_email, e_phone, e_street, e_suburb, e_postcode, e_gender, date_employed)
+ +VALUES (Employee3a_seq.nextval, 'Mary', 'Brown', 'm.brown@uni.edu', '404404404', '17 Exam Way', 'Dakota', '4623', 'f',to_date('12/01/2014','DD/MM/YYYY'));
+ +
+ +INSERT INTO Employee ( e_id, e_fname, e_lname, e_email, e_phone, e_street, e_suburb, e_postcode, e_gender, date_employed)
+ +VALUES (Employee3a_seq.nextval, 'Sarah', 'Heatwood', 's.heatwood@uni.edu', '404404404', '32 Pass Road', 'Sunny Bank', '4100', 'f', to_date('12/01/2014','DD/MM/YYYY'));
+ +
+ +
+ +---Movie Table code ---
+ +
+ +CREATE SEQUENCE Mvie3_seq
+ +START WITH 1
+ +INCREMENT BY 1
+ +NOCACHE
+ +NOCYCLE;
+ +
+ +INSERT INTO Movie (MOVIE_ID, MOVIE_TITLE, MOVIE_RATING, MOVIE_RELEASED_DATE, MOVIE_DESCRIPTION, MOVIE_LENGTH) 
+ +VALUES (Mvie3_seq.nextval, 'Despicable Me 3','pg',to_date('15/06/2017', 'DD/MM/YYYY'),'The mischievous Minions hope that Gru will return to a life of crime after the new boss of the Anti-Villain League fires him. Instead, Gru decides to remain retired and travel to Freedonia to meet his long-lost twin brother for the first time. The reunited siblings soon find themselves in an uneasy alliance to take down the elusive Balthazar Bratt, a former 1980s child star who seeks revenge against the world.','90');
+ +
+ +INSERT INTO Movie (MOVIE_ID, MOVIE_TITLE, MOVIE_RATING,MOVIE_RELEASED_DATE, MOVIE_DESCRIPTION, MOVIE_LENGTH) 
+ +VALUES (Mvie3_seq.nextval, 'Cars 3','g',to_date('22/06/2017','DD/MM/YYYY'),'Blindsided by a new generation of blazing-fast cars, the legendary Lighting McQueen finds himself pushed out of the sport that he loves. Hoping to get back in the game, he turns to Cruz Ramirez, an eager young technician who has her own plans for winning. With inspiration from the Fabulous Hudson Hornet and a few unexpected turns, No. 95 prepares to compete on Piston Cup Racings biggest stage','110');
+ +
+ +INSERT INTO Movie (MOVIE_ID, MOVIE_TITLE, MOVIE_RATING,MOVIE_RELEASED_DATE, MOVIE_DESCRIPTION, MOVIE_LENGTH) 
+ +VALUES (Mvie3_seq.nextval, 'War for the Planet of the Apes','m',to_date('27/07/2017', 'DD/MM/YYYY'),'Caesar (Andy Serkis) and his apes are forced into a deadly conflict with an army of humans led by a ruthless colonel (Woody Harrelson). After the apes suffer unimaginable losses, Caesar wrestles with his darker instincts and begins his own mythic quest to avenge his kind. As the journey finally brings them face to face, Caesar and the colonel are pitted against each other in an epic battle that will determine the fate of both of their species and the future of the planet.','140');
+ +
+ +INSERT INTO Movie (MOVIE_ID, MOVIE_TITLE, MOVIE_RATING,MOVIE_RELEASED_DATE, MOVIE_DESCRIPTION, MOVIE_LENGTH) 
+ +VALUES (Mvie3_seq.nextval, 'Atomic Blonde','ma15+',to_date('03/08/2017', 'DD/MM/YYYY'),'Sensual and savage Lorraine Broughton is the most elite spy in MI6, an agent whos willing to use all of her lethal skills to stay alive during an impossible mission. With the Berlin Wall about to fall, she travels into the heart of the city to retrieve a priceless dossier and take down a ruthless espionage ring. Once there, she teams up with an embedded station chief to navigate her way through the deadliest game of spies.','115');
+ +
+ +-- Ticket-Type Table Code -- 
+ +
+ +CREATE SEQUENCE tt_seq
+ +START WITH 1
+ +INCREMENT BY 1
+ +NOCACHE
+ +NOCYCLE;
+ +
+ +INSERT INTO Ticket_Type(T_TYPE_ID, T_TYPE, T_TYPE_PRICE,T_TYPE_START_DATE,T_TYPE_END_DATE)
+ +VALUES (tt_seq.NEXTVAL, 'Adult','13.95',to_date('01/06/2017','DD/MM/YYYY') , to_date('30/11/2017' , 'DD/MM/YYYY'));
+ +
+ +INSERT INTO Ticket_Type(T_TYPE_ID, T_TYPE, T_TYPE_PRICE,T_TYPE_START_DATE,T_TYPE_END_DATE)
+ +VALUES (tt_seq.NEXTVAL, 'Concession','7',to_date('01/06/2017','DD/MM/YYYY') , to_date('30/11/2017' , 'DD/MM/YYYY'));
+ +
+ +-- Theatre Sequence---
+ +
+ +CREATE SEQUENCE theat_seq
+ +START WITH 1
+ +INCREMENT BY 1
+ +NOCACHE
+ +NOCYCLE;
+ +
+ +CREATE SEQUENCE theat_row_seq
+ +START WITH 1
+ +INCREMENT BY 1
+ +NOCACHE
+ +NOCYCLE;
+ +
+ +CREATE SEQUENCE seat_num4_seq
+ +START WITH 1
+ +INCREMENT BY 1
+ +NOCACHE
+ +NOCYCLE;
+ +
+ +---insert into first theatre 
+ +
+ +INSERT INTO Theatre (THEATRE_ID, THEATRE_DESCRIPTION, THEATRE_TOTAL_ROWS )
+ +VALUES (theat_seq.NEXTVAL, 'null','2');
+ +
+ +-- insert into first theatre first row--
+ +
+ +INSERT INTO Theatre_Row (ROW_ID, ROW_NAME, ROW_TOTAL_SEATS,THEATRE_ID)
+ +VALUES (theat_row_seq.NEXTVAL, 'A','3',theat_seq.CURRVAl);
+ +
+ +-- insert seats into first 3 seats -- 
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '1',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '2',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '3',theat_row_seq.CURRVAL);
+ +
+ +-- insert into Second theatre first row--
+ +
+ +INSERT INTO Theatre_Row (ROW_ID, ROW_NAME, ROW_TOTAL_SEATS,THEATRE_ID)
+ +VALUES (theat_row_seq.NEXTVAL, 'B','3',theat_seq.CURRVAl);
+ +
+ +-- insert seats into first 3 seats -- 
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '1',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '2',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '3',theat_row_seq.CURRVAL);
+ +
+ +---insert into second theatre 
+ +
+ +INSERT INTO Theatre (THEATRE_ID, THEATRE_DESCRIPTION, THEATRE_TOTAL_ROWS )
+ +VALUES (theat_seq.NEXTVAL, 'null','2');
+ +
+ +-- insert into second theatre first row--
+ +
+ +INSERT INTO Theatre_Row (ROW_ID, ROW_NAME, ROW_TOTAL_SEATS,THEATRE_ID)
+ +VALUES (theat_row_seq.NEXTVAL, 'A','3',theat_seq.CURRVAl);
+ +
+ +-- insert seats into first 3 seats -- 
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '1',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '2',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '3',theat_row_seq.CURRVAL);
+ +
+ +-- insert into second theatre first row--
+ +
+ +INSERT INTO Theatre_Row (ROW_ID, ROW_NAME, ROW_TOTAL_SEATS,THEATRE_ID)
+ +VALUES (theat_row_seq.NEXTVAL, 'B','4',theat_seq.CURRVAl);
+ +
+ +-- insert seats into Second 4 seats -- 
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '1',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '2',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '3',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '4',theat_row_seq.CURRVAL);
+ +
+ +-----insert into third theatre 
+ +
+ +INSERT INTO Theatre (THEATRE_ID, THEATRE_DESCRIPTION, THEATRE_TOTAL_ROWS )
+ +VALUES (theat_seq.NEXTVAL, 'null','3');
+ +
+ +-- insert into third theatre first row--
+ +
+ +INSERT INTO Theatre_Row (ROW_ID, ROW_NAME, ROW_TOTAL_SEATS,THEATRE_ID)
+ +VALUES (theat_row_seq.NEXTVAL, 'A','3',theat_seq.CURRVAL);
+ +
+ +-- insert seats into third theatre 3seats -- 
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '1',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '2',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '3',theat_row_seq.CURRVAL);
+ +
+ +-- insert into third theatre second row--
+ +
+ +INSERT INTO Theatre_Row (ROW_ID, ROW_NAME, ROW_TOTAL_SEATS,THEATRE_ID)
+ +VALUES (theat_row_seq.NEXTVAL, 'B','4',theat_seq.CURRVAL);
+ +
+ +-- insert seats into third theatre 4 seats -- 
+ +
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '1',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '2',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '3',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '4',theat_row_seq.CURRVAL);
+ +
+ +-- insert into third theatre third row--
+ +
+ +INSERT INTO Theatre_Row (ROW_ID, ROW_NAME, ROW_TOTAL_SEATS,THEATRE_ID)
+ +VALUES (theat_row_seq.NEXTVAL, 'C','5',theat_seq.CURRVAL);
+ +
+ +-- insert seats into third theatre 5 seats -- 
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '1',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '2',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '3',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '4',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '5',theat_row_seq.CURRVAL);
+ +
+ +-- insert into Fourth theatre --
+ +
+ +INSERT INTO Theatre (THEATRE_ID, THEATRE_DESCRIPTION, THEATRE_TOTAL_ROWS )
+ +VALUES (theat_seq.NEXTVAL, 'null','2');
+ +
+ +-- insert into Fourth theatre third row--
+ +
+ +INSERT INTO Theatre_Row (ROW_ID, ROW_NAME, ROW_TOTAL_SEATS,THEATRE_ID)
+ +VALUES (theat_row_seq.NEXTVAL, 'A','4',theat_seq.CURRVAL);
+ +
+ +-- insert seats into fourth theatre 4 seats -- 
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '1',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '2',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '3',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '4',theat_row_seq.CURRVAL);
+ +
+ +--insert into fourth theatre 2 row
+ +
+ +INSERT INTO Theatre_Row (ROW_ID, ROW_NAME, ROW_TOTAL_SEATS,THEATRE_ID)
+ +VALUES (theat_row_seq.NEXTVAL, 'B','5',theat_seq.CURRVAL);
+ +
+ +-- insert seats into fourth theatre 5 seats -- 
+ +
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '1',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '2',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '3',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '4',theat_row_seq.CURRVAL);
+ +
+ +INSERT INTO Seat (SEAT_ID, SEAT_NUMBER, ROW_ID )
+ +VALUES (seat_num4_seq.NEXTVAL, '5',theat_row_seq.CURRVAL);
+ +
+ +
+ +
+ +
+ +---- DROP SEQUENCES---
+ +
+ +DROP SEQUENCE theat_row_seq;
+ +DELETE FROM THEATRE_Row;
+ +
+ +DROP SEQUENCE theat_seq;
+ +DELETE FROM THEATRE;
+ +
+ +DROP SEQUENCE seat_num4_seq;
+ +DELETE FROM Seat;
+ +
+ +DROP SEQUENCE  tt_seq;
+ +DELETE FROM Ticket_type;
+ +
+ +DROP SEQUENCE Mvie3_seq;
+ +DELETE FROM Movie;
+ +
+ +DROP SEQUENCE Employee3a_seq;
+ +DELETE FROM Employee;
